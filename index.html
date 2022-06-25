@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div dir="ltr" style="text-align: left;" trbidi="on">
+    <div class="question">
+        1- When did the Institute of Medicine first publish its report calling for
+        the widespread adoption and use of computer-based patient records? </div>
+    <ul class="answers">
+
+        <input id="q1a" name="q1" type="radio" value="a" /> <label name="q1" id="q1aq1a"> A) 1981 </label> <br />
+        <input id="q1b" name="q1" type="radio" value="b" /> <label name="q1" id="ans"> B) 1991 </label> <br />
+        <input id="q1c" name="q1" type="radio" value="c" /> <label name="q1" id="q1cq1c"> C) 2001 </label> <br />
+        <input id="q1d" name="q1" type="radio" value="d" /> <label name="q1" id="q1dq1d"> D) 2011 </label> <br />
+
+    </ul>
+    <style>
+        #q1more {display: none;}
+    </style>
+
+    <span id="q1dots">...</span>
+    <span id="q1more">
+Answer is B) </span><br />
+    <button id="q1mybtn" onclick="q1function()">Show Answer </button>
+
+    <script>
+        function q1function() {
+            var q1dots = document.getElementById("q1dots");
+            var q1moreText = document.getElementById("q1more");
+            var q1btnText = document.getElementById("q1mybtn");
+            var answer = document.getElementById("ans");
+            var ele = document.getElementsByName('q1');
+            var lbl = document.getElementsByName('q1');
+
+            if (q1dots.style.display === "none") {
+                q1dots.style.display = "inline";
+                q1btnText.innerHTML = "Show Answer";
+                q1moreText.style.display = "none";
+                for(i = 0; i < lbl.length; i++) {
+                    lbl[i].style.background='none';
+                }
+            }
+            else {
+                q1dots.style.display = "none";
+                q1btnText.innerHTML = "Hide Answer";
+                q1moreText.style.display = "inline";
+                answer.style.background = "limegreen";
+                for (i = 0; i < ele.length; i++) {
+                    if (ele[i].checked) {
+                        let str=ele[i].id+ele[i].id;
+                        if (ele[i].id == 'q1b') {
+                            answer.style.background = "limegreen";
+                        } else {
+                            document.getElementById(str).style.background = 'red';
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <br />
+</div>
+<div class="question">
+    2- HIPAA signed into law in 1996, was designed primarily to:
+</div>
+<ul class="answers">
+
+    <input id="q2a" name="q2" type="radio" value="a" /> <label name="q2" id="q2aq2a"> A) Make health insurance more affordable
+</label> <br />
+    <input id="q2b" name="q2" type="radio" value="b" /> <label name="q2" id="q2bq2b"> B) Simplify administrative processes
+</label> <br />
+    <input id="q2c" name="q2" type="radio" value="c" /> <label name="q2" id="q2cq2c"> C) Protect the security and confidentiality of personal health information
+</label> <br />
+    <input id="q2d" name="q2" type="radio" value="d" /> <label name="q2" id="ans2"> D) All of the above
+</label> <br />
+
+</ul>
+<style>
+    #q2more {display: none;}
+</style>
+
+<span id="q2dots">...</span>
+<span id="q2more">
+Answer is D) </span><br />
+<button id="q2mybtn" onclick="q2function()">Show Answer </button>
+
+<script>
+    function q2function() {
+        var q2dots = document.getElementById("q2dots");
+        var q2moreText = document.getElementById("q2more");
+        var q2btnText = document.getElementById("q2mybtn");
+        var answer = document.getElementById("ans2");
+        var ele = document.getElementsByName('q2');
+        var lbl = document.getElementsByName('q2');
+
+        if (q2dots.style.display === "none") {
+            q2dots.style.display = "inline";
+            q2btnText.innerHTML = "Show Answer";
+            q2moreText.style.display = "none";
+            for(i = 0; i < lbl.length; i++) {
+                lbl[i].style.background='none';
+            }
+        }
+        else {
+            q2dots.style.display = "none";
+            q2btnText.innerHTML = "Hide Answer";
+            q2moreText.style.display = "inline";
+            answer.style.background = "limegreen";
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked) {
+                    let str=ele[i].id+ele[i].id;
+                    if (ele[i].id == 'q2d') {
+                        answer.style.background = "limegreen";
+                    } else {
+                        document.getElementById(str).style.background = 'red';
+                    }
+                }
+            }
+        }
+    }
+</script>
+
+
+<br />
+
+</body>
+</html>
